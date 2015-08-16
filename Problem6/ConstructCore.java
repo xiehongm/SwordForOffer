@@ -14,7 +14,7 @@ public class ConstructCore {
 	 */
 	public BinaryTreeNode constructCore(int[] preorder,int[] inorder) throws Exception
 	{
-		boolean isHave =false;
+		//boolean isHave =false;
 		if(preorder==null || inorder==null)
 		{
 		   return null;
@@ -28,7 +28,7 @@ public class ConstructCore {
 		{
 			if(inorder[i]==preorder[0])
 			{
-				isHave =true;
+				//isHave =true;
 				root.value=inorder[i];
 				root.leftNode=constructCore(Arrays.copyOfRange(preorder,1,i+1)
 						,Arrays.copyOfRange(inorder,0,i));
@@ -36,10 +36,10 @@ public class ConstructCore {
 						,Arrays.copyOfRange(inorder,i+1,inorder.length));
 			}
 		}
-		if(!isHave)
+		/*if(!isHave)
 		{
 			throw new Exception("不包含根节点－非法输入");
-		}
+		}*/
 		return root;
 	}
 }
