@@ -22,7 +22,7 @@ public class Min {
 				break;
 			}
 			mid=(leftIndex+rightIndex)/2;
-			if(array[leftIndex]==array[rightIndex] && array[leftIndex]==array[mid])
+			/*if(array[leftIndex]==array[rightIndex] && array[leftIndex]==array[mid])
 			{
 				if(array[leftIndex+1]!=array[rightIndex-1])
 				{
@@ -35,14 +35,21 @@ public class Min {
 					rightIndex--;
 				}
 					
+			}*/
+			if(array[leftIndex]==array[rightIndex] && array[leftIndex]==array[mid])
+			{
+				int result = array[leftIndex];
+				for(int i = leftIndex + 1; i < rightIndex; i++){
+					if(result > array[i])
+						result = array[i];
+				}
+				return result;
 			}
 			else {
 				if(array[mid]>=array[leftIndex])
 					leftIndex=mid;
-				else {
-					if(array[mid]<=array[rightIndex])
-						rightIndex=mid;
-				}
+				else if(array[mid]<=array[rightIndex])
+					rightIndex=mid;
 			}					
 		}
 		return array[mid];	
