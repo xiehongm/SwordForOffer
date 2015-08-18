@@ -13,7 +13,7 @@ public class Min {
 			return null;
 		int leftIndex=0;
 		int rightIndex=array.length-1;
-		int mid=1;
+		int mid=0;//如果把排序数组的前面的0个元素搬到最后，那么就是array[0]
 		while(array[leftIndex]>=array[rightIndex])
 		{
 			if(rightIndex-leftIndex<=1)
