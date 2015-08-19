@@ -14,7 +14,7 @@ public class PrintToMaxOfNDigits {
 	}
 	private void printArray(int[] array,int n)
 	{
-		for(int i=0;i<10;i++)
+		for(int i=0;i<10;i++)//这里的10代表的是每一位上0~9。
 		{
 			if(n!=array.length)
 			{
