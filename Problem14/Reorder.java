@@ -8,14 +8,20 @@ public class Reorder {
 	{
 		if(array==null)
 			return ;
-		int j=0;//定义一个整数，记录偶数开始的位置
-		for(int i=0;i<array.length;i++)
-		{
-			if(!isEven(array[i]))
-			{
-				int temp=array[i];
-				array[i]=array[j];
-				array[j]=temp;
+		int i = 0;
+		int j = array.length - 1;
+		while(i < j){
+			if(isEven(array[i]) && !isEven(array[j])){
+				int temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}else if(!isEven(array[i]) && !isEven(array[j])){
+				i++;
+			}else if(isEven(array[i]) && isEven(array[j])){
+				j--;
+			}else{
+				i++;
+				j--;
 			}
 		}
 	}
