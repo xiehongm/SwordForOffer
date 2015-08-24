@@ -14,7 +14,8 @@ public class IsPopOrder {
 		Stack<Integer> stack=new Stack<Integer>(); 
 		for(int i=0;i<line2.length;i++)
 		{
-			if(!stack.isEmpty() && stack.peek()==line2[i])
+			if(!stack.isEmpty() && stack.peek()==line2[i])//如果下一个弹出的数字刚好是栈顶数字，那么直接弹出
+								      //line2[i]代表弹出的数字
 			{
 				stack.pop();
 			}
