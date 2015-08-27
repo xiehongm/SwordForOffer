@@ -21,7 +21,7 @@ public class Convert {
 			convert(current.leftNode,lastNode);
 		current.leftNode=lastNode;
 		if(lastNode!=null)
-			lastNode.rightNode=current;
+			lastNode.rightNode=current;//lsatNode的右结点指向current，和上一句current的左结点指向lastNode形成双向链表。
 		lastNode=current;
 		if(current.rightNode!=null)
 			convert(current.rightNode,lastNode);
