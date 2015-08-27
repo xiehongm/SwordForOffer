@@ -29,7 +29,8 @@ public class Clone {
 	}
 	public ComplexListNode reConnectNodes(ComplexListNode root)
 	{
-		ComplexListNode point=root.next;
+		//ComplexListNode point=root.next;
+		ComplexListNode point=root;
 		while(point.next!=null)
 		{
 			point.next=point.next.next;
