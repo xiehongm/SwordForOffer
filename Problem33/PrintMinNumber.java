@@ -23,6 +23,7 @@ public class PrintMinNumber {
 			for (int j=start;j<end;j++)
 			{
 				if(isSmall(String.valueOf(array[j]),String.valueOf(main_number)))
+				//把数字先转换成字符串，防止溢出，同时可以正常比较大小，isSmall是找出较小者。
 				{
 					int temp=array[j];
 					array[j]=array[small_cur];
