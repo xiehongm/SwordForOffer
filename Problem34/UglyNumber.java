@@ -17,6 +17,13 @@ public int getUglyNumber_Solution2(int index){
                 multiply3++;  
             while(uglyArray[multiply5]*5 == uglyArray[i])  
                 multiply5++;  
+           //下面的才对吧？？？？     
+           /* while(uglyArray[multiply2]*2 <= uglyArray[i])  
+                multiply2++;  
+            while(uglyArray[multiply3]*3 <= uglyArray[i])  
+                multiply3++;  
+            while(uglyArray[multiply5]*5 <= uglyArray[i])  
+                multiply5++;*/
         }  
         return uglyArray[index-1];  
     }  
