@@ -1,5 +1,8 @@
 package Problem39;
 
+/*
+*输入一颗二叉树的根节点，求该树的深度。
+*/
 public class treePath {
 	/*
 	 * 1.输入根节点求树的深度
