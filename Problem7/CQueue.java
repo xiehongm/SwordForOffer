@@ -25,7 +25,7 @@ public class CQueue {
 				stack2.push(stack1.pop());
 			}
 		}
-		if(stack2.isEmpty())
+		if(stack1.isEmpty())
 		{
 			throw new Exception("队列为空，不能删除");
 		}
