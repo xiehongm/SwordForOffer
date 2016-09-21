@@ -35,7 +35,7 @@ public class printListReversversingly {
         Node tmp;// 临时结点，用于保存当前结点的指针域（即下一结点）  
         while (cur != null) {// 当前结点为null，说明位于尾结点  
             tmp = cur.Next;  
-            dur.next = pre;// 反转指针域的指向
+            cur.next = pre;// 反转指针域的指向
   
             // 指针往下移动  
             pre = cur;  
