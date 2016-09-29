@@ -30,3 +30,43 @@ class ListNode<K>
 	K data;
 	ListNode<K> nextNode;
 }
+
+
+//另一种方式
+import java.util.Stack;  
+  
+public class Solution {  
+  
+      
+    Stack stack=new Stack();  
+        public void push(int node) {  
+            stack.push(node);  
+        }  
+          
+        public void pop() {  
+            stack.pop();  
+        }  
+          
+        public int top() {  
+            int top=(int) stack.pop();  
+            return top;  
+        }  
+          
+        public int min() {  
+            Stack stac=new Stack();  
+            int min=(int)stack.pop();  
+            stac.push(min);  
+            while(!stack.isEmpty()){  
+                int temp=(int)stack.pop();  
+                if(min>temp){  
+                    min=temp;  
+                }  
+                stac.push(temp);  
+            }  
+            while(!stac.isEmpty()){  
+                stack.push(stac.pop());  
+            }  
+            return min;  
+        }  
+          
+}  
